@@ -1,7 +1,7 @@
-# Pydantic books example
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/cclauss/pydantic-books-example/main.svg)](https://results.pre-commit.ci/latest/github/cclauss/pydantic-books-example/main)
+# Pydantic Books Demo
 
-This repo contains my experiments with [Pydantic](https://pydantic-docs.helpmanual.io) data validation.  [`src/Books/book.py`](../../tree/main/src/Books/book.py) defines four classes: `Author`, `Book`, `Publisher`, `SourceRecord` followed by some Python doctests to show how those classes are validated by Pydantic.  This data validation is mostly handled via Pydantic's verifying type hint compliance at runtime and type conversion where needed.
+
+This repo is for the experiments with [Pydantic](https://pydantic-docs.helpmanual.io) data validation.  [`src/Books/book.py`](../../tree/main/src/Books/book.py) defines four classes: `Author`, `Book`, `Publisher`, `SourceRecord` followed by some Python doctests to show how those classes are validated by Pydantic.  This data validation is mostly handled via Pydantic's verifying type hint compliance at runtime and type conversion where needed.
 
 ```python
 from datetime import date
@@ -40,7 +40,7 @@ I am impressed with the detailed exceptions Pydantic raises which pinpoint where
 ```
 ================================== test session starts ==================================
 platform darwin -- Python 3.9.7, pytest-6.2.5, py-1.10.0, pluggy-1.0.0
-rootdir: /Users/cclauss/Python/import_validator/pydantic-books-example
+rootdir: /Users/donbusha/Python/import_validator/pydantic-books-example
 collected 16 items
 
 src/Books/book.py ...                                                             [ 18%]
