@@ -1,0 +1,15 @@
+name: lint_python
+on: [pull_request, push]
+jobs:
+  lint_python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install --upgrade pip
+      - run: pip install mypy pytest safety
+      - run: pip install -r requirements.txt
+      - run: pytest --doctest-modules .
+      - run: mypy --ignore-missing-imports --install-types --non-interactive .
+      - run: shopt -s globstar && pyupgrade --py38-plus **/*.py || true
+      - run: safety check || true
